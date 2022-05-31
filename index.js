@@ -21,19 +21,19 @@ const dataBelanjaan = [
 ];
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const listBelanjaan = function(){
+const listBelanjaan = function(daftarBarang){
   let detilStruk=[];
-  for(let barisData=0;barisData<dataBelanjaan.length;barisData++){
-    detilStruk.push("- "+dataBelanjaan[barisData].nama+" x "+dataBelanjaan[barisData].kuantitas);
+  for(let barisData=0;barisData<daftarBarang.length;barisData++){
+    detilStruk.push("- "+daftarBarang[barisData].nama+" x "+daftarBarang[barisData].kuantitas);
   }
   return detilStruk;
 }
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const totalBelanjaan = function(){
+const totalBelanjaan = function(daftarBarang){
   let bayar=0;
-  for(let barisData=0;barisData<dataBelanjaan.length;barisData++){
-    bayar += (dataBelanjaan[barisData].harga*dataBelanjaan[barisData].kuantitas);
+  for(let barisData=0;barisData<daftarBarang.length;barisData++){
+    bayar += (daftarBarang[barisData].harga*daftarBarang[barisData].kuantitas);
   }
   return bayar;
 }
